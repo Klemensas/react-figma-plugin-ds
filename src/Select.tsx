@@ -41,7 +41,6 @@ const Select: React.FunctionComponent<SelectProps> = ({
 
   const expandButtonClass = isExpanded ? "select-menu__button--active" : "";
   const expanListClass = isExpanded ? "select-menu__menu--active" : "";
-  const disabledColorClass = isDisabled ? "icon--black3" : "";
 
   return (
     <OutsideClickHandler
@@ -50,7 +49,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
     >
       <div className={`select-menu ${className}`}>
         <button
-          className={`select-menu__button ${expandButtonClass} ${disabledColorClass}`}
+          className={`select-menu__button ${expandButtonClass}`}
           onClick={handleExpandClick}
           disabled={isDisabled}
         >
@@ -60,7 +59,7 @@ const Select: React.FunctionComponent<SelectProps> = ({
           <span className="select-menu__caret" />
         </button>
         <ul
-          className={`select-menu__menu ${expanListClass} ${disabledColorClass}`}
+          className={`select-menu__menu ${expanListClass}`}
           style={{ top: "-24px" }}
         >
           {options &&
