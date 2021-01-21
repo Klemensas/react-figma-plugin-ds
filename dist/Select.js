@@ -56,13 +56,12 @@ var Select = function (_a) {
     };
     var expandButtonClass = isExpanded ? "select-menu__button--active" : "";
     var expanListClass = isExpanded ? "select-menu__menu--active" : "";
-    var disabledColorClass = isDisabled ? "icon--black3" : "";
     return (react_1.default.createElement(react_outside_click_handler_1.default, { onOutsideClick: handleOutsideClick, disabled: !isExpanded },
         react_1.default.createElement("div", { className: "select-menu " + className },
-            react_1.default.createElement("button", { className: "select-menu__button " + expandButtonClass + " " + disabledColorClass, onClick: handleExpandClick, disabled: isDisabled },
+            react_1.default.createElement("button", { className: "select-menu__button " + expandButtonClass, onClick: handleExpandClick, disabled: isDisabled },
                 react_1.default.createElement("span", { className: "select-menu__label" }, (selectedOption && selectedOption.label) || placeholder),
                 react_1.default.createElement("span", { className: "select-menu__caret" })),
-            react_1.default.createElement("ul", { className: "select-menu__menu " + expanListClass + " " + disabledColorClass, style: { top: "-24px" } }, options &&
+            react_1.default.createElement("ul", { className: "select-menu__menu " + expanListClass, style: { top: "-24px" } }, options &&
                 options.map(function (_a, i) {
                     var value = _a.value, label = _a.label, divider = _a.divider;
                     return divider ? (react_1.default.createElement(react_1.default.Fragment, { key: "select-option-divider--" + i },
